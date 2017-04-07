@@ -10,8 +10,8 @@
 #include <libfreenect2/registration.h>
 #include <libfreenect2/packet_pipeline.h>
 #include <libfreenect2/logger.h>
-#include <transfer_pool.h>
-#include <event_loop.h>
+#include <libfreenect2/usb/transfer_pool.h>
+#include <libfreenect2/usb/event_loop.h>
 #include "ofRGBPacketProcessor.h"
 
 #include "ofAppGLFWWindow.h"

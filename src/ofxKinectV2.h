@@ -35,6 +35,12 @@ class ofxKinectV2 : public ofThread{
     
         bool isFrameNew();
     
+        ofPoint getWorldCoordinateAt(int x, int y);
+        vector <ofPoint> getWorldCoordinates();
+
+        float getDistanceAt(const int x, const int y);
+        ofColor getColorAt(const int x, const int y);
+
         ofPixels getDepthPixels();
         ofPixels getRgbPixels();
         ofFloatPixels getRawDepthPixels();
@@ -60,5 +66,16 @@ class ofxKinectV2 : public ofThread{
         ofPixels rgbPixelsFront;
         ofFloatPixels depthPixelsBack;
         ofFloatPixels depthPixelsFront;
+    
+        vector <ofPoint> pointCloudFront;
+        vector <ofPoint> pointCloudBack;
+        vector <ofPoint> pointCloud;
+
         int lastFrameNo; 
+
+    private:
+        const int width = 512;
+        const int height = 424;
+        const int rgbWidth = 1920;
+        const int rgbHeight = 1080;
 };
