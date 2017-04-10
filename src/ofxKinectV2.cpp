@@ -104,7 +104,7 @@ bool ofxKinectV2::open(string serial){
 void ofxKinectV2::threadedFunction(){
 
     while(isThreadRunning()){
-        protonect.updateKinect(rgbPixelsBack, depthPixelsBack, pointCloudBack);
+        protonect.updateKinect(rgbPixelsBack, depthPixelsBack);
         rgbPixelsFront.swap(rgbPixelsBack);
         depthPixelsFront.swap(depthPixelsBack);
                 
