@@ -49,6 +49,11 @@ class ofxKinectV2 : public ofThread{
         ofParameter <float> minDistance;
         ofParameter <float> maxDistance;
 
+        static const int width = 512;
+        static const int height = 424;
+        static const int rgbWidth = 1920;
+        static const int rgbHeight = 1080;
+
     protected:
         void threadedFunction();
 
@@ -74,8 +79,5 @@ class ofxKinectV2 : public ofThread{
         int lastFrameNo; 
 
     private:
-        const int width = 512;
-        const int height = 424;
-        const int rgbWidth = 1920;
-        const int rgbHeight = 1080;
+
 };
