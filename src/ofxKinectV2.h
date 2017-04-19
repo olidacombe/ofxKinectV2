@@ -51,6 +51,7 @@ class ofxKinectV2 : public ofThread{
 
         static const int width = 512;
         static const int height = 424;
+        static const int maxDepth = 4500;
         static const int rgbWidth = 1920;
         static const int rgbHeight = 1080;
 
