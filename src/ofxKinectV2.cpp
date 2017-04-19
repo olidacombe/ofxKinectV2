@@ -130,11 +130,11 @@ vector <ofPoint> ofxKinectV2::getWorldCoordinates(){
 
 
 float ofxKinectV2::getDistanceAt(const int x, const int y) {
-    return depthPix[y * width + x];
+    return depthPix[ofMap(y, 0, rgbHeight, 0, height) * width + ofMap(x, 0, rgbWidth, 0, width)];
 }
 
 ofColor ofxKinectV2::getColorAt(const int x, const int y) {
-    return rgbPix[ofMap(x, 0, width, 0, rgbWidth) + rgbWidth * ofMap(y, 0, height, 0, rgbHeight)];
+    return rgbPix[x + y*rgbHeight];
 }
 
 //--------------------------------------------------------------------------------
